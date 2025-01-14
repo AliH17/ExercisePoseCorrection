@@ -59,6 +59,32 @@ This project implements a real-time fitness tracking and posture correction syst
         •Detailed metrics like joint angles and motion tracking.
    •Loss curves and precision-recall graphs demonstrate strong model performance.
 
+🖥️ Installation and Usage
+Prerequisites
+
+    Python 3.7+
+    GPU (optional but recommended for real-time performance)
+
+Installation
+
+    Clone the repository:
+    git clone https://github.com/your-username/workout-posture-correction.git
+
+Install dependencies:
+
+    pip install -r requirements.txt
+
+Run the Streamlit app:
+
+    streamlit run app.py
+
+Input Options
+
+    Webcam: Use a PC or external webcam.
+    DroidCam USB: Install DroidCam app on your smartphone and connect via USB.
+    Video Uploads: Upload recorded exercise videos for analysis.
+
+
 🧑‍💻 Contributors
   Mohammad Ali Haider 
   Syed Afraz 
