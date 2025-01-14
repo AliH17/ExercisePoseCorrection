@@ -4,6 +4,9 @@ This project implements a real-time fitness tracking and posture correction syst
   •Exercise Classification: Utilizes YOLOv8 for classifying push-ups, squats, and bicep curls.
   •Pose Estimation: Leverages MediaPipe Pose to track skeletal landmarks and analyze exercise form.
   •Real-Time Feedback: Offers immediate suggestions and corrections to improve workout posture and reduce the risk of injuries.
+
+![image](https://github.com/user-attachments/assets/f5409f5d-e545-46f6-87c4-c31eb4b002c5)
+
   •Multi-Input Support:
         •Webcam Integration
         •DroidCam USB for smartphone usage
@@ -15,10 +18,16 @@ This project implements a real-time fitness tracking and posture correction syst
     •Videos of exercises recorded at 60 FPS.
     •Frames extracted and annotated using Roboflow.
     •Data augmentation for diversity (brightness, rotation, flipping).
-    •Dataset split into:
+
+![image](https://github.com/user-attachments/assets/d0c44cb2-5ad9-462f-9224-b89a302045c7)
+
+   •Dataset split into:
         •Training Set (70%)
         •Validation Set (20%)
         •Test Set (10%)
+
+![image](https://github.com/user-attachments/assets/24efeb91-c1c0-4350-84ea-dc2c6da11886)
+
 
 2. Model Training
     •Trained using YOLOv8 architecture for robust and fast exercise detection.
@@ -44,14 +53,13 @@ This project implements a real-time fitness tracking and posture correction syst
 
 📊 Results
 
-    •High accuracy in detecting and classifying exercises.
-    •Comprehensive feedback on form:
+   •High accuracy in detecting and classifying exercises.
+   •Comprehensive feedback on form:
         •Real-time corrections using skeletal landmarks.
         •Detailed metrics like joint angles and motion tracking.
-    •Loss curves and precision-recall graphs demonstrate strong model performance.
+   •Loss curves and precision-recall graphs demonstrate strong model performance.
 
 🧑‍💻 Contributors
-
-    Mohammad Ali Haider 
-    Syed Afraz 
-    Mufti Muqaram Majid Farooqi 
+  Mohammad Ali Haider 
+  Syed Afraz 
+  Mufti Muqaram Majid Farooqi 
