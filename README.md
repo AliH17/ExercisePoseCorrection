@@ -1,63 +1,42 @@
-# ExercisePoseCorrection
+# ExercisePoseCorrection 🔥 🏋🏻‍♂️
 This project implements a real-time fitness tracking and posture correction system using computer vision and deep learning techniques. It focuses on detecting and classifying three key exercises—push-ups, squats, and bicep curls—while providing real-time feedback on exercise form.
-🚀 Features:
-  •Exercise Classification: Utilizes YOLOv8 for classifying push-ups, squats, and bicep curls.
-  •Pose Estimation: Leverages MediaPipe Pose to track skeletal landmarks and analyze exercise form.
-  •Real-Time Feedback: Offers immediate suggestions and corrections to improve workout posture and reduce the risk of injuries.
 
-![image](https://github.com/user-attachments/assets/f5409f5d-e545-46f6-87c4-c31eb4b002c5)
+  
+![Image](https://github.com/user-attachments/assets/e62fb81f-44cf-483b-812c-6f014d3dce2a)
 
-  •Multi-Input Support:
-        •Webcam Integration
-        •DroidCam USB for smartphone usage
-        •Pre-recorded video uploads
-  •User-Friendly Deployment: Built using Streamlit for an interactive and intuitive interface.
 
-🛠️ Methodology
-1. Data Collection
-    •Videos of exercises recorded at 60 FPS.
-    •Frames extracted and annotated using Roboflow.
-    •Data augmentation for diversity (brightness, rotation, flipping).
 
+ 
+
+## 🛠️ Methodology
+#### 1. Data Collection & Model Training
+
+   Videos of excercises were recorded at 60fps, the frames were then extracted using a simple python script, finally annotation and data augmentation was done with the help of roboflow
+    
 ![image](https://github.com/user-attachments/assets/d0c44cb2-5ad9-462f-9224-b89a302045c7)
 
-   •Dataset split into:
-        •Training Set (70%)
-        •Validation Set (20%)
-        •Test Set (10%)
+Dataset was split into 70% training, 20% validation and 10% Test sets and was then trained using YOLOv8 for robust and fast excercise detection 
 
-![image](https://github.com/user-attachments/assets/24efeb91-c1c0-4350-84ea-dc2c6da11886)
+#### 2. Model Training Results
 
+  We were able to achieve a Precision of 99%, Recall 89% and mAP50-95 score of 92.7%
+       
 
-2. Model Training
-    •Trained using YOLOv8 architecture for robust and fast exercise detection.
-    •Optimized on GPU for efficiency.
-    •Metrics:
-        •Precision: 99%
-        •Recall: 89%
-        •mAP50-95: 92.7%
+#### 3. Pose Estimation & Form Analysis
 
-3. Pose Estimation & Form Analysis
-    •MediaPipe Pose identifies body landmarks.
-    •Specific posture criteria ensure correct exercise execution:
+  MediaPipe Pose was used to identify the body landmarks, upoun which depending on the type of excercise classified a logic was using to determine if the posture is correct or not
         •Push-Ups: Detect up/down phases and evaluate back alignment.
         •Squats: Analyze knee alignment, shoulder-to-knee posture, and back angle.
         •Bicep Curls: Assess elbow movement and shoulder stability.
 
-4. Deployment
-    •Streamlit app allows real-time feedback and video analysis.
-    •Three modes of input:
-        •Webcam for live feedback.
-        •DroidCam USB to use a smartphone as a webcam.
-        •Video Uploads for offline analysis.
+#### 4. Deployment
+  Streamlit was used to deploy the model with three modes of input (Webcam, DroidCam and Video Uploads) to allow real time feedback 
 
-📊 Results
+#### 5. Demo
 
-   •High accuracy in detecting and classifying exercises.
-   •Comprehensive feedback on form:
-        •Real-time corrections using skeletal landmarks.
-        •Detailed metrics like joint angles and motion tracking.
-   •Loss curves and precision-recall graphs demonstrate strong model performance.
+[https://github.com/user-attachments/assets/6ffbccd0-181b-4bba-a95c-4d07c03a34fd](https://github.com/user-attachments/assets/e1b2ff2e-53da-4fdb-9661-9931df81af89)
+
+
 
 🖥️ Installation and Usage
 Prerequisites
@@ -76,7 +55,7 @@ Install dependencies:
 
 Run the Streamlit app:
 
-    streamlit run app.py
+    streamlit run excercise_pose_correction.py
 
 Input Options
 
@@ -85,7 +64,8 @@ Input Options
     Video Uploads: Upload recorded exercise videos for analysis.
 
 
-🧑‍💻 Contributors
-  Mohammad Ali Haider 
-  Syed Afraz 
-  Mufti Muqaram Majid Farooqi 
+#### Contributors
+  [Ali Haider](https://github.com/AliH17)
+  [Muqaram Majid](https://github.com/Muqaram0)
+  [Syed Afraz](https://github.com/RageRolling)
+  
